@@ -13,7 +13,7 @@ router.get("/getTasks", function (req, res, next) {
 router.delete("/deleteTask/:id", function (req, res, next) {
   const taskId = parseInt(req.params.id);
   tasks = tasks.filter((task) => task.id !== taskId);
-  res.json({ message: "Task deleted successfully" });s
+  res.json({ message: "Task deleted successfully" });
 });
 
 router.post("/addTask", function (req, res, next) {
