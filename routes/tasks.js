@@ -3,20 +3,7 @@ var router = express.Router();
 var mongoose = require("mongoose");
 const Tasks = require("../models/Tasks");
 
-let tasks = [
-  {
-    id: 1,
-    name: "Task 1",
-    description: "Description for Task 1",
-    dueDate: "2026-10-01",
-  },
-  {
-    id: 2,
-    name: "Task 2",
-    description: "Description for Task 2",
-    dueDate: "2026-10-01",
-  },
-];
+let tasks = [];
 
 router.get("/getTasks", function (req, res, next) {
   Tasks.find()

@@ -3,10 +3,7 @@ var router = express.Router();
 var mongoose = require("mongoose");
 const Goals = require("../models/Goals");
 
-let goals = [
-  { id: 1, name: "Goal 1", description: "Description for Goal 1" },
-  { id: 2, name: "Goal 2", description: "Description for Goal 2" },
-];
+let goals = [];
 
 router.get("/getGoals", function (req, res, next) {
   Goals.find()
